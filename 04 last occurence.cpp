@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std ;
 
-int first_occurence(int arr[], int size, int key);
+int last_occurence(int arr[], int size, int key);
 
 int main() {
     // int arr[] = { 1, 10, 10, 10, 20, 20, 40 };
-    // int index = first_occurence(arr, 7, 20);
+    // int index = last_occurence(arr, 7, 20);
     int arr[] = {5, 5, 5};
-    int index = first_occurence(arr, 3, 5);
+    int index = last_occurence(arr, 3, 5);
     cout << "First Index is : " << index << endl; 
 }
 
-int first_occurence(int arr[], int size, int key) {
+int last_occurence(int arr[], int size, int key) {
     int start = 0;
     int end = size - 1; 
     while (start <= end) {
