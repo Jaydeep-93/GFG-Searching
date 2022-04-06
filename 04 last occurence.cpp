@@ -17,7 +17,7 @@ int first_occurence(int arr[], int size, int key) {
     while (start <= end) {
         int mid = (start + end) / 2; 
         if (arr[mid] == key) {
-            if (arr[mid+1] == key)
+            if (mid + 1 < size && arr[mid + 1] == key)
                 start = mid + 1; 
             else
                 return mid; 
