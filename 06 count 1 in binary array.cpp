@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int first_occurence(int arr[], int size, int key);
+
+int main()
+{
+    int arr[] = {0, 0, 0, 1, 1, 1, 1};
+    int index = first_occurence(arr, 7, 1);
+    cout << "First Index is : " << index << endl;
+    cout << "Count is : " << (7 - index) << endl;
+}
+
+int first_occurence(int arr[], int size, int key)
+{
+    int start = 0;
+    int end = size - 1;
+    while (start <= end)
+    {
+        int mid = (start + end) / 2;
+        if (arr[mid] == key)
+        {
+            if (arr[mid - 1] == key)
+                end = mid - 1;
+            else
+                return mid;
+        }
+        else if (arr[mid] > key)
+            end = mid - 1;
+        else
+            start = mid + 1;
+    }
+    return -1;
+}
