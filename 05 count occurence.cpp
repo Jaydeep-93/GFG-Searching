@@ -10,7 +10,7 @@ int main()
     int x = 20;
     int first = first_occurence(arr, 6, x);
     int last = last_occurence(arr, 6, x);
-    cout << "Count is : " << (last - first + 1) << endl;
+    cout << "Count is : " << (last - first + 1) << endl ;
 }
 
 int first_occurence(int arr[], int size, int key)
