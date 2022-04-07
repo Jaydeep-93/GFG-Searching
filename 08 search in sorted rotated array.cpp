@@ -5,8 +5,8 @@ int search(int arr[], int size, int key);
 
 int main()
 {
-    int arr[] = {30, 40, 50, 60, 70, 80, 90, 100, 10, 20};
-    int index = search(arr, 10, 10);
+    int arr[] = {100, 10, 20, 30, 40, 50, 60, 70, 80, 90};
+    int index = search(arr, 10, 30);
     cout << index << endl;
 }
 
@@ -24,14 +24,14 @@ int search(int arr[], int size, int key)
 
         else if (arr[start] < arr[mid])
         {
-            if (arr[start] < key && arr[mid] > key)
+            if (arr[start] <= key && arr[mid] > key)
                 end = mid - 1;
             else
                 start = mid + 1;
         }
         else
         {
-            if (arr[mid] < key && arr[end] > key)
+            if (arr[mid] < key && arr[end] >= key)
                 start = mid + 1;
             else
                 end = mid - 1;
