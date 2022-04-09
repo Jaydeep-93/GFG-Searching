@@ -29,3 +29,8 @@ int last_occurence(int arr[], int size, int key) {
     }
     return -1; 
 }
+
+// key points 
+// if we found key element 
+// check if next index is valid and its value is same as mid 
+// if yes then move start to that position 
